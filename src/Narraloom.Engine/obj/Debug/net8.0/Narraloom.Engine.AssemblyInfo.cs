@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Narraloom.Engine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a0bb8fa111073a0ff8d0dba094a0a387443e48b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b7c510e52dad32495befb3c76741f4e91dd7d70")]
 [assembly: System.Reflection.AssemblyProductAttribute("Narraloom.Engine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Narraloom.Engine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

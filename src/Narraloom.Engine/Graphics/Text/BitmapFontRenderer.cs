@@ -1,6 +1,7 @@
 using Silk.NET.OpenGL;
 using Narraloom.Assets.Fonts;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Narraloom.Engine.Graphics.Text;
@@ -68,61 +69,41 @@ public sealed class BitmapFontRenderer
 		_gl.BindVertexArray(0);
 	}
 
-	public void DrawText(string text, float x, float y, float scale, float r, float g, float b, float a = 1f)
+	private float AdvanceOf(char ch, float scale)
 	{
-		if (string.IsNullOrEmpty(text))
-			return;
+		if (ch == '\t') ch = ' ';
+		if (_font.Glyphs.TryGetValue(ch, out var g))
+			return g.XAdvance * scale;
 
-		// Build a big vertex array for batching: 6 vertices per glyph, 4 floats per vertex
-		// total floats = glyphCount * 6 * 4
-		// We'll skip missing glyphs safely.
-		var floats = new List<float>(text.Length * 24);
+		// fallback: a small advance
+		return (_font.LineHeight * 0.33f) * scale;
+	}
 
-		float penX = x;
-		float penY = y;
+	private void AddGlyphQuads(List<float> floats, BitmapFont.Glyph g, float penX, float penY, float scale)
+	{
+		float gx = penX + g.XOffset * scale;
+		float gy = penY + g.YOffset * scale;
+		float gw = g.Width * scale;
+		float gh = g.Height * scale;
 
-		foreach (char ch in text)
-		{
-			if (ch == '\n')
-			{
-				penX = x;
-				penY += _font.LineHeight * scale;
-				continue;
-			}
+		float u0 = g.X / (float)_font.ScaleW;
+		float v0 = g.Y / (float)_font.ScaleH;
+		float u1 = (g.X + g.Width) / (float)_font.ScaleW;
+		float v1 = (g.Y + g.Height) / (float)_font.ScaleH;
 
-			if (!_font.Glyphs.TryGetValue(ch, out var gph))
-			{
-				penX += (_font.LineHeight * 0.3f) * scale; // simple fallback advance
-				continue;
-			}
+		// tri1
+		floats.Add(gx); floats.Add(gy); floats.Add(u0); floats.Add(v0);
+		floats.Add(gx + gw); floats.Add(gy); floats.Add(u1); floats.Add(v0);
+		floats.Add(gx + gw); floats.Add(gy + gh); floats.Add(u1); floats.Add(v1);
+		// tri2
+		floats.Add(gx); floats.Add(gy); floats.Add(u0); floats.Add(v0);
+		floats.Add(gx + gw); floats.Add(gy + gh); floats.Add(u1); floats.Add(v1);
+		floats.Add(gx); floats.Add(gy + gh); floats.Add(u0); floats.Add(v1);
+	}
 
-			// Position in pixels
-			float gx = penX + gph.XOffset * scale;
-			float gy = penY + gph.YOffset * scale;
-			float gw = gph.Width * scale;
-			float gh = gph.Height * scale;
-
-			// UV (0..1)
-			float u0 = gph.X / (float)_font.ScaleW;
-			float v0 = gph.Y / (float)_font.ScaleH;
-			float u1 = (gph.X + gph.Width) / (float)_font.ScaleW;
-			float v1 = (gph.Y + gph.Height) / (float)_font.ScaleH;
-
-			// 2 triangles (x,y,u,v)
-			// tri1
-			floats.Add(gx); floats.Add(gy); floats.Add(u0); floats.Add(v0);
-			floats.Add(gx + gw); floats.Add(gy); floats.Add(u1); floats.Add(v0);
-			floats.Add(gx + gw); floats.Add(gy + gh); floats.Add(u1); floats.Add(v1);
-			// tri2
-			floats.Add(gx); floats.Add(gy); floats.Add(u0); floats.Add(v0);
-			floats.Add(gx + gw); floats.Add(gy + gh); floats.Add(u1); floats.Add(v1);
-			floats.Add(gx); floats.Add(gy + gh); floats.Add(u0); floats.Add(v1);
-
-			penX += gph.XAdvance * scale;
-		}
-
-		if (floats.Count == 0)
-			return;
+	private void Flush(List<float> floats, float r, float g, float b, float a)
+	{
+		if (floats.Count == 0) return;
 
 		_gl.UseProgram(_shader);
 
@@ -141,5 +122,135 @@ public sealed class BitmapFontRenderer
 		_gl.DrawArrays(PrimitiveType.Triangles, 0, (uint)vertexCount);
 
 		_gl.BindVertexArray(0);
+	}
+
+	/// <summary>
+	/// Draws text in a box with word-wrap.
+	/// - maxWidth: wrap width in pixels
+	/// - maxLines: if >0, clamps line count
+	/// - visibleChars: if >=0, draws only that many characters (typewriter)
+	/// Returns: (drawnChars, isFullyShown)
+	/// </summary>
+	public (int drawnChars, bool fullyShown) DrawTextWrapped(
+		string text,
+		float x,
+		float y,
+		float maxWidth,
+		float scale,
+		float r, float g, float b, float a,
+		int maxLines = 0,
+		int visibleChars = -1
+	)
+	{
+		if (string.IsNullOrEmpty(text) || maxWidth <= 1)
+			return (0, true);
+
+		var floats = new List<float>(Math.Min(text.Length, 256) * 24);
+
+		float penX = x;
+		float penY = y;
+
+		int line = 1;
+		int drawn = 0;
+
+		bool limitChars = visibleChars >= 0;
+
+		// simple word-wrap tokenizer: build words including trailing space
+		int i = 0;
+		while (i < text.Length)
+		{
+			if (limitChars && drawn >= visibleChars)
+				break;
+
+			char c = text[i];
+
+			// explicit newline
+			if (c == '\n')
+			{
+				i++;
+				drawn++;
+
+				penX = x;
+				penY += _font.LineHeight * scale;
+				line++;
+
+				if (maxLines > 0 && line > maxLines)
+					return (drawn, false);
+
+				continue;
+			}
+
+			// gather one "token": either a run of spaces OR a word (non-space run)
+			int start = i;
+			bool isSpace = c == ' ' || c == '\t';
+			while (i < text.Length)
+			{
+				char cc = text[i];
+				bool spaceNow = cc == ' ' || cc == '\t';
+				if (cc == '\n') break;
+				if (spaceNow != isSpace) break;
+				i++;
+			}
+			string token = text.Substring(start, i - start);
+
+			// measure token width
+			float tokenWidth = 0f;
+			for (int k = 0; k < token.Length; k++)
+			{
+				if (limitChars && (drawn + k) >= visibleChars)
+					break;
+
+				tokenWidth += AdvanceOf(token[k], scale);
+			}
+
+			// wrap rule: if token doesn't fit and it's not leading spaces, go next line
+			bool wouldOverflow = (penX - x) + tokenWidth > maxWidth;
+			if (wouldOverflow && !isSpace && (penX > x))
+			{
+				penX = x;
+				penY += _font.LineHeight * scale;
+				line++;
+
+				if (maxLines > 0 && line > maxLines)
+					return (drawn, false);
+			}
+
+			// draw token (respect visibleChars)
+			for (int k = 0; k < token.Length; k++)
+			{
+				if (limitChars && drawn >= visibleChars)
+					break;
+
+				char ch = token[k];
+				drawn++;
+
+				if (ch == '\t') ch = ' ';
+
+				if (ch == ' ')
+				{
+					penX += AdvanceOf(' ', scale);
+					continue;
+				}
+
+				if (_font.Glyphs.TryGetValue(ch, out var glyph))
+				{
+					AddGlyphQuads(floats, glyph, penX, penY, scale);
+					penX += glyph.XAdvance * scale;
+				}
+				else
+				{
+					penX += AdvanceOf(ch, scale);
+				}
+			}
+		}
+
+		Flush(floats, r, g, b, a);
+
+		bool fully = !limitChars || drawn >= text.Length;
+		if (limitChars) fully = (drawn >= Math.Min(text.Length, visibleChars)) && (visibleChars >= text.Length);
+
+		// "fullyShown" here means: if visibleChars is used, did we reach end of string?
+		bool fullyShown = !limitChars ? true : (visibleChars >= text.Length);
+		return (drawn, fullyShown);
 	}
 }
