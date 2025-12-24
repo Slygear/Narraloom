@@ -2,14 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\Narraloom.Assets",
-    "\\src\\Narraloom.Core",
     "\\src\\Narraloom.Editor",
     "\\src\\Narraloom.Engine",
+    "\\src\\Narraloom.Engine\\Graphics",
+    "\\src\\Narraloom.Engine\\Graphics\\Shaders",
     "\\src\\Narraloom.Player",
     "\\src\\Narraloom.Script",
-    "\\src\\Narraloom.UI"
+    "\\src\\Narraloom.UI",
+    "\\src\\Narraloom.UI\\Text"
   ],
-  "SelectedNode": "\\src\\Narraloom.Engine\\EngineApp.cs",
+  "SelectedNode": "\\src\\Narraloom.Engine\\Graphics\\QuadRenderer.cs",
   "PreviewInSolutionExplorer": false
 }

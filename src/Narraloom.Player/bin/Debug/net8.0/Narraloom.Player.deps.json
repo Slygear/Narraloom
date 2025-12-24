@@ -112,6 +112,18 @@
           }
         }
       },
+      "Silk.NET.OpenGL.Legacy/2.22.0": {
+        "dependencies": {
+          "Silk.NET.Core": "2.22.0",
+          "Silk.NET.Maths": "2.22.0"
+        },
+        "runtime": {
+          "lib/net5.0/Silk.NET.OpenGL.Legacy.dll": {
+            "assemblyVersion": "2.22.0.0",
+            "fileVersion": "2.22.0.0"
+          }
+        }
+      },
       "Silk.NET.Windowing/2.22.0": {
         "dependencies": {
           "Silk.NET.Windowing.Common": "2.22.0",
@@ -139,6 +151,14 @@
           "lib/net5.0/Silk.NET.Windowing.Glfw.dll": {
             "assemblyVersion": "2.22.0.0",
             "fileVersion": "2.22.0.0"
+          }
+        }
+      },
+      "StbImageSharp/2.30.15": {
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {
+            "assemblyVersion": "2.30.15.0",
+            "fileVersion": "2.30.15.0"
           }
         }
       },
@@ -195,14 +215,34 @@
           }
         }
       },
+      "Narraloom.Assets/1.0.0": {
+        "runtime": {
+          "Narraloom.Assets.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Narraloom.Engine/1.0.0": {
         "dependencies": {
+          "Narraloom.Assets": "1.0.0",
+          "Narraloom.UI": "1.0.0",
           "Silk.NET.Input": "2.22.0",
           "Silk.NET.OpenGL": "2.22.0",
-          "Silk.NET.Windowing": "2.22.0"
+          "Silk.NET.OpenGL.Legacy": "2.22.0",
+          "Silk.NET.Windowing": "2.22.0",
+          "StbImageSharp": "2.30.15"
         },
         "runtime": {
           "Narraloom.Engine.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Narraloom.UI/1.0.0": {
+        "runtime": {
+          "Narraloom.UI.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -286,6 +326,13 @@
       "path": "silk.net.opengl/2.22.0",
       "hashPath": "silk.net.opengl.2.22.0.nupkg.sha512"
     },
+    "Silk.NET.OpenGL.Legacy/2.22.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2WRaVkQgZ8ofwsbAVyeqMiEDZlZT6ZS9OA3+bbJ8kFUimBey3PwYXIStk0o2T0irDxhdqyjoM85Ub1r5epLd/g==",
+      "path": "silk.net.opengl.legacy/2.22.0",
+      "hashPath": "silk.net.opengl.legacy.2.22.0.nupkg.sha512"
+    },
     "Silk.NET.Windowing/2.22.0": {
       "type": "package",
       "serviceable": true,
@@ -306,6 +353,13 @@
       "sha512": "sha512-hBNxNSLvx/jdfvbU6oCsXcgLfqf9hMlEc6Mq/rllJ0eUTLloacuOZHTM8V702QGf7hOR+Mo4bTFqTqBnC0CM7g==",
       "path": "silk.net.windowing.glfw/2.22.0",
       "hashPath": "silk.net.windowing.glfw.2.22.0.nupkg.sha512"
+    },
+    "StbImageSharp/2.30.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7QqbupVhz2kcFUPTgMw4iHR9rYDHGundzzee19Mwmd1typ2Lnv8EVJcLJxlkeBM2+4ex0NwsMtdbGSJctp1XCQ==",
+      "path": "stbimagesharp/2.30.15",
+      "hashPath": "stbimagesharp.2.30.15.nupkg.sha512"
     },
     "System.Memory/4.5.5": {
       "type": "package",
@@ -349,7 +403,17 @@
       "path": "ultz.native.glfw/3.4.0",
       "hashPath": "ultz.native.glfw.3.4.0.nupkg.sha512"
     },
+    "Narraloom.Assets/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Narraloom.Engine/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Narraloom.UI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

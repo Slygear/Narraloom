@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\QuadRenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Narraloom.Engine\\Graphics\\QuadRenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\BitmapTextRenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Narraloom.Engine\\Graphics\\BitmapTextRenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\EngineApp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Narraloom.Engine\\EngineApp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\Shaders\\simple.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Narraloom.Engine\\Graphics\\Shaders\\simple.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\Shaders\\simple.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Narraloom.Engine\\Graphics\\Shaders\\simple.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.UI\\Text\\EmbeddedFont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Narraloom.UI\\Text\\EmbeddedFont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Player\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,11 +38,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QuadRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\QuadRenderer.cs",
+              "RelativeDocumentMoniker": "src\\Narraloom.Engine\\Graphics\\QuadRenderer.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\QuadRenderer.cs",
+              "RelativeToolTip": "src\\Narraloom.Engine\\Graphics\\QuadRenderer.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T20:31:35.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "simple.frag",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\Shaders\\simple.frag",
+              "RelativeDocumentMoniker": "src\\Narraloom.Engine\\Graphics\\Shaders\\simple.frag",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\Shaders\\simple.frag",
+              "RelativeToolTip": "src\\Narraloom.Engine\\Graphics\\Shaders\\simple.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-24T20:31:23.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "simple.vert",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\Shaders\\simple.vert",
+              "RelativeDocumentMoniker": "src\\Narraloom.Engine\\Graphics\\Shaders\\simple.vert",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\Shaders\\simple.vert",
+              "RelativeToolTip": "src\\Narraloom.Engine\\Graphics\\Shaders\\simple.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-24T20:31:16.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "BitmapTextRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\BitmapTextRenderer.cs",
+              "RelativeDocumentMoniker": "src\\Narraloom.Engine\\Graphics\\BitmapTextRenderer.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Graphics\\BitmapTextRenderer.cs",
+              "RelativeToolTip": "src\\Narraloom.Engine\\Graphics\\BitmapTextRenderer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T20:27:39.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmbeddedFont.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.UI\\Text\\EmbeddedFont.cs",
+              "RelativeDocumentMoniker": "src\\Narraloom.UI\\Text\\EmbeddedFont.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.UI\\Text\\EmbeddedFont.cs",
+              "RelativeToolTip": "src\\Narraloom.UI\\Text\\EmbeddedFont.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T20:27:23.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Player\\Program.cs",
               "RelativeDocumentMoniker": "src\\Narraloom.Player\\Program.cs",
@@ -35,13 +120,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "EngineApp.cs",
               "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\EngineApp.cs",
               "RelativeDocumentMoniker": "src\\Narraloom.Engine\\EngineApp.cs",
               "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\EngineApp.cs",
               "RelativeToolTip": "src\\Narraloom.Engine\\EngineApp.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACwAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAE0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-24T20:01:08.535Z",
               "EditorCaption": ""

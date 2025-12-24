@@ -152,6 +152,23 @@
           }
         }
       },
+      "Silk.NET.OpenGL.Legacy/2.22.0": {
+        "type": "package",
+        "dependencies": {
+          "Silk.NET.Core": "2.22.0",
+          "Silk.NET.Maths": "2.22.0"
+        },
+        "compile": {
+          "lib/net5.0/Silk.NET.OpenGL.Legacy.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Silk.NET.OpenGL.Legacy.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Silk.NET.Windowing/2.22.0": {
         "type": "package",
         "dependencies": {
@@ -191,6 +208,15 @@
           "lib/net5.0/Silk.NET.Windowing.Glfw.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "StbImageSharp/2.30.15": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
         }
       },
       "System.Memory/4.5.5": {
@@ -311,19 +337,43 @@
           }
         }
       },
+      "Narraloom.Assets/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Narraloom.Assets.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Narraloom.Assets.dll": {}
+        }
+      },
       "Narraloom.Engine/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Narraloom.Assets": "1.0.0",
+          "Narraloom.UI": "1.0.0",
           "Silk.NET.Input": "2.22.0",
           "Silk.NET.OpenGL": "2.22.0",
-          "Silk.NET.Windowing": "2.22.0"
+          "Silk.NET.OpenGL.Legacy": "2.22.0",
+          "Silk.NET.Windowing": "2.22.0",
+          "StbImageSharp": "2.30.15"
         },
         "compile": {
           "bin/placeholder/Narraloom.Engine.dll": {}
         },
         "runtime": {
           "bin/placeholder/Narraloom.Engine.dll": {}
+        }
+      },
+      "Narraloom.UI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Narraloom.UI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Narraloom.UI.dll": {}
         }
       }
     }
@@ -593,6 +643,27 @@
         "silkdotnet_v3.png"
       ]
     },
+    "Silk.NET.OpenGL.Legacy/2.22.0": {
+      "sha512": "2WRaVkQgZ8ofwsbAVyeqMiEDZlZT6ZS9OA3+bbJ8kFUimBey3PwYXIStk0o2T0irDxhdqyjoM85Ub1r5epLd/g==",
+      "type": "package",
+      "path": "silk.net.opengl.legacy/2.22.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net5.0/Silk.NET.OpenGL.Legacy.dll",
+        "lib/net5.0/Silk.NET.OpenGL.Legacy.xml",
+        "lib/netcoreapp3.1/Silk.NET.OpenGL.Legacy.dll",
+        "lib/netcoreapp3.1/Silk.NET.OpenGL.Legacy.xml",
+        "lib/netstandard2.0/Silk.NET.OpenGL.Legacy.dll",
+        "lib/netstandard2.0/Silk.NET.OpenGL.Legacy.xml",
+        "lib/netstandard2.1/Silk.NET.OpenGL.Legacy.dll",
+        "lib/netstandard2.1/Silk.NET.OpenGL.Legacy.xml",
+        "silk.net.opengl.legacy.2.22.0.nupkg.sha512",
+        "silk.net.opengl.legacy.nuspec",
+        "silkdotnet_v3.png"
+      ]
+    },
     "Silk.NET.Windowing/2.22.0": {
       "sha512": "yKGe/8REdm+T43LdtfUpFUx9eQARwx6wTmEoJ2bANVGQPCvWYC2Qi1+haT6n63dyNIX+iJWKg4++F4TFjg0/Fw==",
       "type": "package",
@@ -642,6 +713,19 @@
         "silk.net.windowing.glfw.2.22.0.nupkg.sha512",
         "silk.net.windowing.glfw.nuspec",
         "silkdotnet_v3.png"
+      ]
+    },
+    "StbImageSharp/2.30.15": {
+      "sha512": "7QqbupVhz2kcFUPTgMw4iHR9rYDHGundzzee19Mwmd1typ2Lnv8EVJcLJxlkeBM2+4ex0NwsMtdbGSJctp1XCQ==",
+      "type": "package",
+      "path": "stbimagesharp/2.30.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net471/StbImageSharp.dll",
+        "lib/netstandard2.0/StbImageSharp.dll",
+        "stbimagesharp.2.30.15.nupkg.sha512",
+        "stbimagesharp.nuspec"
       ]
     },
     "System.Memory/4.5.5": {
@@ -871,10 +955,20 @@
         "ultz.native.glfw.nuspec"
       ]
     },
+    "Narraloom.Assets/1.0.0": {
+      "type": "project",
+      "path": "../Narraloom.Assets/Narraloom.Assets.csproj",
+      "msbuildProject": "../Narraloom.Assets/Narraloom.Assets.csproj"
+    },
     "Narraloom.Engine/1.0.0": {
       "type": "project",
       "path": "../Narraloom.Engine/Narraloom.Engine.csproj",
       "msbuildProject": "../Narraloom.Engine/Narraloom.Engine.csproj"
+    },
+    "Narraloom.UI/1.0.0": {
+      "type": "project",
+      "path": "../Narraloom.UI/Narraloom.UI.csproj",
+      "msbuildProject": "../Narraloom.UI/Narraloom.UI.csproj"
     }
   },
   "projectFileDependencyGroups": {

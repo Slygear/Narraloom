@@ -4,14 +4,14 @@
     "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Player\\Narraloom.Player.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Narraloom.Engine.csproj": {
+    "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Assets\\Narraloom.Assets.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Narraloom.Engine.csproj",
-        "projectName": "Narraloom.Engine",
-        "projectPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Narraloom.Engine.csproj",
+        "projectUniqueName": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Assets\\Narraloom.Assets.csproj",
+        "projectName": "Narraloom.Assets",
+        "projectPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Assets\\Narraloom.Assets.csproj",
         "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\obj\\",
+        "outputPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Assets\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -42,6 +42,71 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Narraloom.Engine.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Narraloom.Engine.csproj",
+        "projectName": "Narraloom.Engine",
+        "projectPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Narraloom.Engine.csproj",
+        "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Assets\\Narraloom.Assets.csproj": {
+                "projectPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Assets\\Narraloom.Assets.csproj"
+              },
+              "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.UI\\Narraloom.UI.csproj": {
+                "projectPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.UI\\Narraloom.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Silk.NET.Input": {
               "target": "Package",
@@ -51,9 +116,17 @@
               "target": "Package",
               "version": "[2.22.0, )"
             },
+            "Silk.NET.OpenGL.Legacy": {
+              "target": "Package",
+              "version": "[2.22.0, )"
+            },
             "Silk.NET.Windowing": {
               "target": "Package",
               "version": "[2.22.0, )"
+            },
+            "StbImageSharp": {
+              "target": "Package",
+              "version": "[2.30.15, )"
             }
           },
           "imports": [
@@ -102,6 +175,64 @@
                 "projectPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.Engine\\Narraloom.Engine.csproj"
               }
             }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.UI\\Narraloom.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.UI\\Narraloom.UI.csproj",
+        "projectName": "Narraloom.UI",
+        "projectPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.UI\\Narraloom.UI.csproj",
+        "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ahmet\\OneDrive\\Documents\\Narraloom\\src\\Narraloom.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
           }
         },
         "warningProperties": {

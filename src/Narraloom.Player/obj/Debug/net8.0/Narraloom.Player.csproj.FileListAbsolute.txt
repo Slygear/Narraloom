@@ -34,3 +34,10 @@ C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\obj\Debug\net8.
 C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\obj\Debug\net8.0\Narraloom.Player.pdb
 C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\obj\Debug\net8.0\Narraloom.Player.genruntimeconfig.cache
 C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\obj\Debug\net8.0\ref\Narraloom.Player.dll
+C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\bin\Debug\net8.0\Silk.NET.OpenGL.Legacy.dll
+C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\bin\Debug\net8.0\Narraloom.UI.dll
+C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\bin\Debug\net8.0\Narraloom.UI.pdb
+C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\obj\Debug\net8.0\Narraloom.Player.sourcelink.json
+C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\bin\Debug\net8.0\StbImageSharp.dll
+C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\bin\Debug\net8.0\Narraloom.Assets.dll
+C:\Users\ahmet\OneDrive\Documents\Narraloom\src\Narraloom.Player\bin\Debug\net8.0\Narraloom.Assets.pdb

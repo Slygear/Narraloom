@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Narraloom.Player")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a0bb8fa111073a0ff8d0dba094a0a387443e48b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Narraloom.Player")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Narraloom.Player")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
