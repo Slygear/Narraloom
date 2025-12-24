@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Narraloom.Assets",
+    "\\src\\Narraloom.Core",
+    "\\src\\Narraloom.Editor",
+    "\\src\\Narraloom.Engine",
+    "\\src\\Narraloom.Player",
+    "\\src\\Narraloom.Script",
+    "\\src\\Narraloom.UI"
+  ],
+  "SelectedNode": "\\src\\Narraloom.Engine\\EngineApp.cs",
+  "PreviewInSolutionExplorer": false
+}
